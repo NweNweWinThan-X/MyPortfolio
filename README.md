@@ -28,6 +28,11 @@ How to run it locally
 2. Type: npm start.
 3. Open your browser to http://localhost:3000.
 
-#### Or click here -> https://nwenwewinthan-x.github.io/MyPortfolio/
+## Using Vercel
+Check -> https://vercel.com/nwenwewinthan-xs-projects/my-portfolio
 
-#### Or With vercel deploy is here ->  https://vercel.com/nwenwewinthan-xs-projects/my-portfolio
+------
+
+#### Click here -> https://nwenwewinthan-x.github.io/MyPortfolio/
+
+#### With vercel deploy is here ->  https://my-portfolio-one-dusky-19.vercel.app/
