@@ -23,3 +23,11 @@ This project intentionally avoids a complex build pipeline to achieve:
 
 ## How to Run Locally
 Simply open `index.html` in any modern web browser.
+How to run it locally
+1. Open your terminal in the project folder.
+2. Type: npm start.
+3. Open your browser to http://localhost:3000.
+
+#### Or click here -> https://nwenwewinthan-x.github.io/MyPortfolio/
+
+#### Or With vercel deploy is here ->  https://vercel.com/nwenwewinthan-xs-projects/my-portfolio
