@@ -1,36 +1,168 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Software Engineer | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nwe Nwe Win Than | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 </head>
-<body class="bg-white text-slate-900 font-sans antialiased">
-    <nav class="max-w-5xl mx-auto px-8 py-12 flex justify-between items-center">
-        <h2 class="text-xl font-bold tracking-tighter uppercase">Professional Profile</h2>
-        <a href="mailto:your-email@example.com" class="text-sm font-medium hover:text-blue-600 transition">Get in touch</a>
-    </nav>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <div id="root"></div>
 
-    <header class="max-w-5xl mx-auto px-8 py-20">
-        <h1 class="text-6xl font-extrabold tracking-tight mb-6">Software Engineer.</h1>
-        <p class="text-2xl text-slate-500 max-w-2xl leading-relaxed">
-            Specializing in high-availability systems and scalable web architecture. Currently focused on optimizing performance for enterprise applications.
-        </p>
-    </header>
+  <script>
+    const data = {
+      name: 'Nwe Nwe Win Than',
+      title: 'Software Engineer',
+      contact: 'nwenwewinthan777@gmail.com',
+      location: 'Tokyo, Japan',
+      languageLevel: 'TOEIC 710 / Japanese N3-N2',
+      phone: '070-2252-7003',
+      summary: 'Delivery-focused software engineer with more than 8 years of experience delivering business systems and web applications. Expert in PHP, C#, Java, JavaScript, AWS, Docker, and cross-functional team collaboration.',
+      about: 'Web Application Engineer delivering requirements definition, design, implementation, and testing of 101+ test cases per release for business systems across web and database layers. Builds and improves 11+ features per project cycle with Agile development, SOLID principles, and languages including PHP, C#, JavaScript, and Java. Supports quality and maintainability while working with clients and teammates to align solutions with business needs.',
+      metrics: [
+        { label: 'Languages', value: '3+' },
+        { label: 'Experience', value: '9+ years' }
+      ],
+      workHistory: [
+        { role: 'Senior Software Engineer', company: 'Generic Solutions Co.ltd', period: '11.2024 – Current' },
+        { role: 'Software Engineer', company: 'Starsoft Solutions Co.ltd', period: '12.2022 – 10.2024' },
+        { role: 'Full Stack Developer / Sub Leader', company: 'Seattle Consulting Co.ltd / META TEAM Co.ltd', period: '06.2018 – 10.2022' },
+        { role: 'Web Developer Intern', company: 'OK$ Co.ltd', period: '10.2017 – 04.2018' }
+      ],
+      highlights: [
+        { title: 'Toolsite Website System', text: 'Built a web application with Laravel, Vue.js, MySQL, Docker, and AWS. Led frontend and backend delivery, batch processing, QA coordination, and stakeholder communication.' },
+        { title: 'GS8 Banking System', text: 'Delivered a banking platform using Java Spring Boot, React, PostgreSQL, Docker, and AWS. Supported design, development, and integration testing.' }
+      ],
+      education: { title: 'Bachelor of Computer Science', school: 'Computer University of Magway, Myanmar', detail: '2012 Dec - 2018 Feb (graduated Feb 2018)' },
+      skills: ['PHP / Laravel', 'C# / ASP.NET / MVC', 'Java / Spring Boot', 'JavaScript / Vue.js / React', 'MySQL', 'PostgreSQL', 'AWS', 'Docker', 'Git', 'CI/CD', 'System Design', 'Team Coordination']
+    };
 
-    <section class="max-w-5xl mx-auto px-8 py-20 border-t border-slate-100">
-        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-12">Selected Projects</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-                <h4 class="text-2xl font-bold mb-2">System Orchestrator</h4>
-                <p class="text-slate-600 mb-4">Optimized microservices communication, reducing API latency by 40% across 50+ nodes.</p>
-                <div class="flex gap-2 text-xs font-mono text-blue-600">
-                    <span>#Node.js</span> <span>#Redis</span> <span>#AWS</span>
-                </div>
-            </div>
-            </div>
-    </section>
+    const e = React.createElement;
+    const { useState } = React;
+
+    const Card = ({ children, className = '' }) => e('div', { className: `rounded-3xl border border-white/10 bg-slate-900/80 p-6 ${className}` }, children);
+
+    function App() {
+      const [activeSkills, setActiveSkills] = useState(new Set());
+      const skillList = data.skills;
+      const toggleSkill = (skill) => setActiveSkills(prev => {
+        const next = new Set(prev);
+        if (next.has(skill)) next.delete(skill);
+        else next.add(skill);
+        return next;
+      });
+
+      return e('div', { className: 'min-h-screen bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.15),_transparent_38%),radial-gradient(circle_at_top_right,_rgba(59,130,246,0.18),_transparent_28%),linear-gradient(180deg,_#020617_0%,_#0f172a_45%,_#020617_100%)]' },
+        e('header', { className: 'max-w-6xl mx-auto px-6 py-10 lg:px-8' },
+          e('div', { className: 'flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6' },
+            e('div', null,
+              e('p', { className: 'text-sm uppercase tracking-[0.4em] text-slate-400' }, data.title),
+              e('h1', { className: 'mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight' }, data.name),
+              e('p', { className: 'mt-4 max-w-2xl text-slate-300 leading-8' }, data.summary),
+              e('div', { className: 'mt-6 flex flex-wrap items-center gap-4 text-sm text-slate-400' },
+                e('span', null, data.location),
+                e('span', { className: 'text-slate-600' }, '•'),
+                e('span', null, data.languageLevel),
+                e('span', { className: 'text-slate-600' }, '•'),
+                e('span', null, data.phone)
+              )
+            ),
+            e('a', { href: `mailto:${data.contact}`, className: 'inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-800/80 px-6 py-3 text-sm font-semibold text-sky-300 transition hover:border-sky-400 hover:text-white' }, 'Contact me')
+          )
+        ),
+        e('main', { className: 'max-w-6xl mx-auto px-6 pb-16 lg:px-8 space-y-16' },
+          e('section', { className: 'grid gap-8 lg:grid-cols-[1.5fr_1fr]' },
+            e(Card, { className: 'shadow-[0_20px_120px_-40px_rgba(14,165,233,0.35)]' },
+              e('div', { className: 'flex items-center gap-3 text-sky-300 mb-6' },
+                e('div', { className: 'h-10 w-10 rounded-2xl bg-sky-500/15 flex items-center justify-center text-xl' }, 'S'),
+                e('p', { className: 'text-xs uppercase tracking-[0.35em] text-slate-500' }, 'Summary')
+              ),
+              e('p', { className: 'text-slate-300 leading-8' }, data.about)
+            ),
+            e('div', { className: 'space-y-6' },
+              e(Card, null,
+                e('div', { className: 'flex items-center gap-3 text-sky-300 mb-4' },
+                  e('div', { className: 'h-10 w-10 rounded-2xl bg-sky-500/15 flex items-center justify-center text-xl' }, 'O'),
+                  e('p', { className: 'text-xs uppercase tracking-[0.35em] text-slate-500' }, 'Overview')
+                ),
+                e('div', { className: 'grid gap-4 sm:grid-cols-2' },
+                  data.metrics.map(metric => e('div', { key: metric.label, className: 'rounded-3xl bg-slate-950/80 p-5' },
+                    e('p', { className: 'text-sm uppercase tracking-[0.35em] text-slate-500' }, metric.label),
+                    e('p', { className: 'mt-3 text-3xl font-semibold text-white' }, metric.value)
+                  ))
+                )
+              ),
+              e(Card, null,
+                e('div', { className: 'flex items-center gap-3 text-sky-300 mb-4' },
+                  e('div', { className: 'h-10 w-10 rounded-2xl bg-sky-500/15 flex items-center justify-center text-xl' }, 'W'),
+                  e('p', { className: 'text-xs uppercase tracking-[0.35em] text-slate-500' }, 'Work History')
+                ),
+                e('div', { className: 'space-y-4' },
+                  data.workHistory.map(item => e('article', { key: item.company, className: 'rounded-3xl bg-slate-950/80 p-5' },
+                    e('p', { className: 'text-sm text-slate-400' }, item.role),
+                    e('h3', { className: 'mt-2 text-xl font-semibold' }, item.company),
+                    e('p', { className: 'mt-1 text-sm text-slate-500' }, item.period)
+                  ))
+                )
+              )
+            )
+          ),
+          e('section', { className: 'grid gap-8 lg:grid-cols-[1.25fr_0.75fr]' },
+            e(Card, null,
+              e('h2', { className: 'text-2xl font-bold mb-6' }, 'Highlights'),
+              e('div', { className: 'space-y-6' },
+                data.highlights.map(item => e('div', { key: item.title, className: 'rounded-3xl bg-slate-950/80 p-6' },
+                  e('h3', { className: 'font-semibold' }, item.title),
+                  e('p', { className: 'mt-2 text-slate-400 leading-7' }, item.text)
+                ))
+              )
+            ),
+            e('aside', { className: 'space-y-6' },
+              e(Card, null,
+                e('h2', { className: 'text-2xl font-bold mb-6' }, 'Education'),
+                e('div', { className: 'space-y-4' },
+                  e('div', null,
+                    e('h3', { className: 'font-semibold' }, data.education.title),
+                    e('p', { className: 'text-slate-400' }, data.education.school),
+                    e('p', { className: 'mt-2 text-sm text-slate-500' }, data.education.detail)
+                  )
+                )
+              ),
+              e(Card, null,
+                e('div', null,
+                e('div', { className: 'mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between' },
+                  e('div', null,
+                    e('h2', { className: 'text-2xl font-bold' }, 'Skills'),
+                    e('p', { className: 'mt-2 text-sm text-slate-400' }, activeSkills.size ? `${activeSkills.size} highlighted` : 'Tap a badge to highlight each technology')
+                  ),
+                  e('button', {
+                    type: 'button',
+                    onClick: () => setActiveSkills(new Set()),
+                    className: 'inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-800/80 px-4 py-2 text-sm font-medium text-slate-300 transition hover:border-sky-400 hover:text-white'
+                  }, 'Clear selection')
+                ),
+                e('div', { className: 'grid gap-3 sm:grid-cols-2' },
+                  skillList.map(skill => {
+                    const isActive = activeSkills.has(skill);
+                    return e('button', {
+                      key: skill,
+                      type: 'button',
+                      onClick: () => toggleSkill(skill),
+                      className: `rounded-full px-4 py-3 text-sm transition ${isActive ? 'bg-sky-500 text-slate-950 shadow-[0_15px_40px_-20px_rgba(56,189,248,0.8)]' : 'bg-slate-950/80 text-slate-300 hover:bg-slate-800/90 hover:text-white'}`
+                    }, skill);
+                  })
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
 </body>
 </html>
