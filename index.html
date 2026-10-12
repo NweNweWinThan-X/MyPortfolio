@@ -1,51 +1,38 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nwe Nwe Win Than | Software Engineer</title>
+  <title>Nwe Nwe Win Than | Senior Software Engineer</title>
+  <meta name="description" content="Senior full-stack software engineer with 8+ years building business-critical web systems — Java 21, Spring Boot, React. Four years in Tokyo across banking, securities and workforce platforms." />
+  <meta property="og:title" content="Nwe Nwe Win Than | Senior Software Engineer" />
+  <meta property="og:description" content="8+ years of full-stack engineering across Java/Spring Boot, React, C#/.NET and PHP/Laravel. Financial systems in Tokyo." />
+  <meta property="og:type" content="profile" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230ea5e9'/><text y='68' x='50' font-size='54' font-family='system-ui' font-weight='700' fill='%23020617' text-anchor='middle'>N</text></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .snow-scene {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-      transform-style: preserve-3d;
-    }
-
+    html { scroll-behavior: smooth; }
+    .snow-scene { position: absolute; inset: 0; pointer-events: none; overflow: hidden; transform-style: preserve-3d; }
     .snow-scene span {
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      width: 6px;
-      height: 6px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 9999px;
-      filter: drop-shadow(0 0 4px rgba(255,255,255,0.7));
-      opacity: 0.8;
-      transform-origin: center;
-      animation: fall 6s linear infinite, sway 3s ease-in-out infinite;
+      position: absolute; top: -10px; left: 50%; width: 6px; height: 6px;
+      background: rgba(255,255,255,0.9); border-radius: 9999px;
+      filter: drop-shadow(0 0 4px rgba(255,255,255,0.7)); opacity: 0.8;
+      transform-origin: center; animation: fall 6s linear infinite, sway 3s ease-in-out infinite;
     }
-
     .snow-scene span:nth-child(2) { left: 20%; animation-delay: 0.8s; animation-duration: 7s; transform: translateZ(20px); }
     .snow-scene span:nth-child(3) { left: 85%; animation-delay: 1.4s; animation-duration: 6.5s; transform: translateZ(-20px); }
     .snow-scene span:nth-child(4) { left: 35%; animation-delay: 0.3s; animation-duration: 5.5s; transform: translateZ(30px); }
     .snow-scene span:nth-child(5) { left: 65%; animation-delay: 1.1s; animation-duration: 7.2s; transform: translateZ(-15px); }
     .snow-scene span:nth-child(6) { left: 10%; animation-delay: 0.5s; animation-duration: 6.8s; transform: translateZ(10px); }
-
     @keyframes fall {
       0% { transform: translate3d(0, -10px, 0) rotateX(0deg) rotateY(0deg); opacity: 0.8; }
       100% { transform: translate3d(-25px, 260px, 80px) rotateX(360deg) rotateY(180deg); opacity: 0.2; }
     }
-
-    @keyframes sway {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(18px); }
-    }
+    @keyframes sway { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(18px); } }
+    @media (prefers-reduced-motion: reduce) { .snow-scene span { animation: none; opacity: 0.25; } }
   </style>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased">
   <div id="root"></div>
@@ -53,278 +40,460 @@
   <script>
     const data = {
       name: 'Nwe Nwe Win Than',
-      title: 'Software Engineer',
-      address: 'Tokyo, JP 174-0064',
-      phone: '817022527003',
+      title: 'Senior Software Engineer',
+      tagline: 'Full-Stack · Java 21 · Spring Boot · React',
+      location: 'Tokyo, Japan',
+      phone: '+81 70-2252-7003',
       email: 'nwenwewinthan777@gmail.com',
-      summary: 'Web Application Engineer delivering requirements definition, design, implementation, and testing of 101+ test cases per release for business systems across web and database layers. Builds and improves 11+ features per project cycle with Agile development, SOLID principles, and languages including PHP, C#, JavaScript, and Java. Supports quality and maintainability while working with clients and teammates to align solutions with business needs.',
+      availability: 'Open to software engineering roles in Tokyo',
+      summary: 'Full-stack software engineer with 8+ years building and operating business-critical web systems, including nearly 4 years in Tokyo. Three of those systems were in the financial domain — a securities CRM, a banking platform covering payments, fund management and loan products, and a financial business system. Current stack is Java 21 / Spring Boot with React; previously C# / .NET MVC and PHP / Laravel. Owns features end to end, from requirements definition through operational testing, and served as sub-leader on three projects running progress tracking, task allocation and code-review standards for teams of five to seven.',
       links: [
-        { label: 'LinkIn', value: 'linkedin.com/in/nwe-nwe-win-than', href: 'https://linkedin.com/in/nwe-nwe-win-than' },
-        { label: 'My Info', value: 'my-portfolio-one-dusky-19.vercel.app', href: 'https://my-portfolio-one-dusky-19.vercel.app/' },
-        { label: 'My Github', value: 'github.com/NweNweWinThan-X', href: 'https://github.com/NweNweWinThan-X' }
+        { label: 'GitHub', value: 'github.com/NweNweWinThan-X', href: 'https://github.com/NweNweWinThan-X' },
+        { label: 'LinkedIn', value: 'linkedin.com/in/nwe-nwe-win-than', href: 'https://linkedin.com/in/nwe-nwe-win-than' }
       ],
-      languages: [
-        { name: 'English', level: 'Intermediate' },
-        { name: 'Japanese', level: 'Intermediate' },
-        { name: 'Chinese (Mandarin)', level: 'Basic' }
+      downloads: [
+        { label: 'Resume (English, PDF)', href: './cv-form/NWENWE_WINTHAN_Resume_English.pdf' },
+        { label: '職務経歴書 (日本語)', href: './cv-form/Shokumu-Keirekisho_NWENWE_WINTHAN_2026.docx' }
+      ],
+      metrics: [
+        { label: 'Experience', value: '8+ yrs' },
+        { label: 'In Tokyo', value: '4 yrs' },
+        { label: 'Finance systems', value: '3' },
+        { label: 'Projects delivered', value: '8' }
       ],
       skillCategories: [
-        { title: 'Technical Skills', items: ['Java', 'PHP', 'C#', 'JavaScript', 'React', 'Vue', 'Vuex', 'Bootstrap', 'Tailwind CSS', 'Thymeleaf', 'Docker', 'AWS', 'Git', 'CI/CD pipelines', 'System design & architecture'] },
-        { title: 'Engineering Leadership', items: ['Mentoring', 'Code review standards', 'Delivery planning', 'Cross-functional coordination'] },
-        { title: 'Delivery & Collaboration', items: ['Requirements definition', 'Test planning', 'Documentation standards', 'Issue triage'] }
+        { title: 'Languages', items: ['Java 21', 'C#', 'VB.NET', 'PHP', 'JavaScript', 'TypeScript', 'SQL'] },
+        { title: 'Backend', items: ['Spring Boot', 'Spring Security', 'Spring Data JPA', 'Thymeleaf', 'Laravel', 'ASP.NET MVC', 'REST API design', 'Batch processing', 'JWT / RBAC'] },
+        { title: 'Frontend', items: ['React 19', 'Vue.js', 'Vuex', 'Nuxt.js', 'Tailwind CSS', 'Bootstrap', 'Vuetify', 'Vite'] },
+        { title: 'Data', items: ['PostgreSQL', 'MySQL', 'Oracle', 'SQL Server', 'Flyway', 'Query tuning'] },
+        { title: 'Infrastructure', items: ['Docker', 'AWS (S3/SNS/CloudWatch)', 'GitHub Actions', 'GitLab CI', 'Azure DevOps', 'Tomcat', 'Linux'] },
+        { title: 'Quality', items: ['JUnit', 'Playwright', 'Unit / IT / system / operational test design', 'Regression testing', 'Code review'] },
+        { title: 'Delivery', items: ['Agile', 'SOLID', 'Requirements definition', 'Basic & detailed design', 'Technical documentation', 'Mentoring'] }
       ],
+      learning: ['Kubernetes', 'Redis', 'Apache Kafka', 'Terraform'],
       experiences: [
         {
           title: 'Senior Software Engineer',
-          company: 'Generic Solutions Co.ltd, Tokyo',
-          period: 'Nov 2024 – Current',
-          projects: ['GS8 WorkBench – Attendance & Workforce Management System', 'GS8 Banking System'],
-          overview: 'Developed and enhanced workforce and banking systems with front-end and back-end delivery focused on performance, maintainability, and quality.',
-          responsibilities: [
-            'Developed and enhanced web application features.',
-            'Implemented new functionality and performed unit and integration testing.',
-            'Created test cases and supported QA activities.',
-            'Collaborated with team members to resolve issues and conduct code reviews.',
-            'Designed and developed new application features and enhancements.',
-            'Developed and maintained backend services and responsive user interfaces.',
-            'Optimized application performance and maintained existing functionality.',
-            'Created design documents, technical specifications, and test cases.',
-            'Collaborated with QA engineers, business analysts, and project stakeholders.',
-            'Conducted code reviews to maintain code quality and development standards.'
-          ],
-          achievements: [
-            'Improved team productivity through daily progress tracking and effective knowledge sharing.',
-            'Contributed to application development, testing, documentation, and peer code reviews.',
-            'Improved development workflow through effective collaboration and knowledge sharing.',
-            'Supported team members through technical guidance and peer code reviews.',
-            'Delivered maintainable, high-quality features while meeting project requirements.'
-          ],
-          technologies: ['Java', 'Spring Boot', 'React', 'Thymeleaf', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Tailwind CSS', 'Docker', 'MySQL', 'PostgreSQL', 'GitLab', 'Visual Studio Code', 'XPipe', 'Redmine', 'Google Chat'],
-          teamSize: '6 members'
+          company: 'Generic Solutions Co., Ltd.',
+          location: 'Tokyo, Japan',
+          period: 'Nov 2024 – Present',
+          current: true,
+          stack: 'Java / Spring Boot',
+          projects: [
+            {
+              name: 'GS8 Banking System',
+              period: 'Dec 2024 – Present',
+              teamSize: '6 members',
+              blurb: 'Payments, fund management and loan servicing.',
+              bullets: [
+                'Designed and built front-end and back-end features for loan product servicing and plan-versus-actual reconciliation, through detailed design, implementation, and unit, integration, system and operational testing.',
+                'Built REST endpoints and Spring Boot service layers backing React and Thymeleaf interfaces, keeping a single domain model across both rendering paths.',
+                'Authored design documents, UT/IT specifications and test cases, then reviewed teammates’ code against them to hold a consistent quality bar across a six-person team.'
+              ],
+              technologies: ['Java 21', 'Spring Boot', 'Thymeleaf', 'React', 'Tailwind CSS', 'MySQL', 'PostgreSQL', 'Docker', 'AWS', 'Tomcat', 'GitLab']
+            },
+            {
+              name: 'GS8 WorkBench — Attendance & Workforce Management',
+              period: 'Nov 2024 – Feb 2025',
+              teamSize: '5 members',
+              blurb: 'Attendance, work reporting, paid leave and task progress for an organisation-wide internal platform.',
+              bullets: [
+                'Delivered attendance, work-reporting, paid-leave and task-progress features, covering build and test phases.',
+                'Instituted a daily review of progress, current work and remaining tasks across the team, which removed duplicated and dropped work items.'
+              ],
+              technologies: ['Java', 'Spring Boot', 'Thymeleaf', 'Bootstrap', 'jQuery', 'MySQL', 'Tomcat', 'GitLab']
+            }
+          ]
         },
         {
           title: 'Software Engineer',
-          company: 'Starsoft Solutions Co.ltd, Tokyo, Japan',
+          company: 'Starsoft Co., Ltd.',
+          location: 'Tokyo, Japan',
           period: 'Dec 2022 – Oct 2024',
-          projects: ['Tokai Tokyo Securities – CRM System', 'WF Business Document Integration System'],
-          overview: 'Enhanced CRM and integration systems through upgrades, testing, and application improvements.',
-          responsibilities: [
-            'Designed and developed web application features using ASP.NET MVC and C#.',
-            'Performed unit, integration, system, and operational testing.',
-            'Verified Oracle database version upgrades and conducted regression testing.',
-            'Collaborated with QA, project leaders, and business users to resolve issues.',
-            'Participated in code reviews and supported team members.'
-          ],
-          achievements: [
-            'Improved system reliability through thorough testing and database upgrade validation.',
-            'Supported smooth development progress through effective communication with team members and stakeholders.'
-          ],
-          technologies: ['ASP.NET', 'C#', 'JavaScript', 'HTML', 'CSS', '.NET Framework', 'MVC', 'jQuery', 'Oracle', 'Visual Studio', 'WinMerge', 'Redmine'],
-          teamSize: '5 members'
+          stack: 'C# / VB.NET / ASP.NET MVC',
+          projects: [
+            {
+              name: 'WF Document Integration System',
+              period: 'Jun 2023 – Oct 2024',
+              teamSize: '5 members',
+              blurb: 'Workflow, application and approval-document routing for enterprise business processes.',
+              bullets: [
+                'Implemented detailed design through operational testing for case management, scheduling and approval-document features.',
+                'Built batch programs for scheduled document processing, replacing manual steps in the approval pipeline.',
+                'Produced UT/IT specifications and test cases, and handled QA and specification clarification throughout a 17-month engagement.'
+              ],
+              technologies: ['VB.NET', 'C#', 'ASP.NET', '.NET Framework', 'MVC', 'Oracle', 'SQL Server 2012', 'IIS', 'TFS', 'Azure DevOps']
+            },
+            {
+              name: 'Tokai Tokyo Securities — CRM System',
+              period: 'Dec 2022 – May 2023',
+              teamSize: '5 members',
+              blurb: 'Customer relationship management for a securities brokerage.',
+              bullets: [
+                'Validated an Oracle version upgrade by running full-screen verification and new-versus-current comparison testing across the application, then regression and system testing — protecting a production brokerage system through the migration.',
+                'Replaced an Excel-and-macro inquiry-tracking process with a web-based module, moving customer enquiry handling into the system of record.',
+                'Added and unit-tested customer-management screens, and managed insurance information and analysis features with business users and QA.'
+              ],
+              technologies: ['C#', 'ASP.NET', '.NET Framework', 'MVC', 'jQuery', 'Oracle', 'Visual Studio', 'Redmine']
+            }
+          ]
         },
         {
-          title: 'Full Stack Developer / Sub Leader',
-          company: 'Seattle Consulting Co.ltd / META TEAM Co.ltd, Yangon',
+          title: 'Software Engineer → Sub Leader',
+          company: 'Seattle Consulting Co., Ltd. / META TEAM Co., Ltd.',
+          location: 'Yangon, Myanmar',
           period: 'Jun 2018 – Oct 2022',
-          projects: ['ToolSite – Web Catalog & Product Management System', 'Axis – Energy Management System', 'Spider – Construction Management System'],
-          overview: 'Delivered web systems for product management, energy monitoring, and construction management while supporting team leadership and QA.',
-          responsibilities: [
-            'Developed web application features and product management functions.',
-            'Participated in the full development lifecycle: requirements analysis, design, development, testing, and maintenance.',
-            'Created design documents, technical specifications, and test cases.',
-            'Supported team management, task assignment, progress tracking, and code reviews as Sub Leader.'
-          ],
-          achievements: [
-            'Improved team productivity through daily progress tracking and effective communication.',
-            'Supported team members through technical guidance and code reviews.'
-          ],
-          technologies: ['PHP', 'Laravel', 'Vue.js', 'Vuex', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'jQuery', 'Chart.js', 'MySQL', 'GitHub', 'Bitbucket', 'Slack'],
-          teamSize: '5 members'
+          stack: 'PHP / Laravel / Vue.js',
+          projects: [
+            {
+              name: 'ToolSite — Web Catalog & Product Management System',
+              period: 'Jul 2018 – Feb 2022',
+              teamSize: '6 members',
+              blurb: 'Product catalogue and management platform, plus a rebuild of the existing system.',
+              bullets: [
+                'Owned product-management and batch features across the full lifecycle — requirements definition, basic and detailed design, build, and unit through operational testing — on a three-and-a-half-year engagement.',
+                'Promoted to Sub Leader after 18 months; took on schedule management, task allocation and code review, and proposed the technology choices for new modules.',
+                'Proposed a re-sequenced task plan when the team fell significantly behind schedule, and took on redistribution of work to recover the delivery date.',
+                'Integrated AWS S3, SNS and CloudWatch for asset storage, notifications and monitoring.'
+              ],
+              technologies: ['PHP', 'Laravel', 'Vue.js', 'Vuex', 'Sass', 'CoreUI', 'Vuetify', 'MySQL', 'Docker', 'AWS S3/SNS/CloudWatch']
+            },
+            {
+              name: 'Axis — Energy Management System',
+              period: 'Feb 2022 – May 2022',
+              teamSize: '7 members · Sub Leader',
+              blurb: 'Electricity monitoring and reporting across municipal and prefectural bodies.',
+              bullets: [
+                'Built capacity search, consumption calculation and aggregation features, plus chart-based dashboards.',
+                'Ran the full lifecycle from requirements definition to operational testing as sub-leader, including the next-version upgrade plan.'
+              ],
+              technologies: ['PHP', 'Laravel', 'Vue.js', 'Vuex', 'Chart.js', 'MySQL', 'BitBucket']
+            },
+            {
+              name: 'Spider — Construction Management System',
+              period: 'May 2022 – Oct 2022',
+              teamSize: '5 members · Sub Leader',
+              blurb: 'Site, worker, drawing and process management for construction operations.',
+              bullets: [
+                'Coordinated specifications directly with Japan’s Ministry of Health, Labour and Welfare, then designed, built and tested the agreed features.',
+                'Set scheduling, resource allocation and task assignment, and ran the customer helpdesk for production issues.',
+                'Wrote the resource-flow and setup documentation the team used for environment provisioning.'
+              ],
+              technologies: ['PHP', 'Laravel', 'Vue.js', 'Vuex', 'Nuxt.js', 'Vuetify', 'PostgreSQL', 'Docker', 'GitHub']
+            }
+          ]
         },
         {
-          title: 'Web Developer Intern',
-          company: 'OK$ Co.ltd, Myanmar',
+          title: 'Software Engineer',
+          company: 'OK Dollar Co., Ltd. (OK$)',
+          location: 'Yangon, Myanmar',
           period: 'Oct 2017 – Apr 2018',
-          projects: ['OKS – Financial Business System'],
-          overview: 'Developed internal financial system features and supported system maintenance and testing.',
-          responsibilities: [
-            'Developed contract management patches and new application features.',
-            'Designed, developed, and tested web interfaces.',
-            'Developed RESTful APIs.',
-            'Performed unit, integration, and operational testing.',
-            'Maintained existing applications and improved system performance.',
-            'Participated in code reviews to ensure quality and adherence to development standards.'
-          ],
-          achievements: [
-            'Collaborated with clients to gather requirements and clarify complex specifications.',
-            'Improved user experience through iterative design feedback and continuous system enhancements.'
-          ],
-          technologies: ['C#', 'ASP.NET', 'JavaScript', 'HTML', 'CSS', '.NET Framework', 'ASP.NET MVC', 'Bootstrap', 'jQuery', 'Microsoft SQL Server (MSSQL)', 'Windows 10'],
-          teamSize: '5 members'
+          stack: 'C# / ASP.NET MVC',
+          projects: [
+            {
+              name: 'OK$ Financial Business System',
+              period: 'Oct 2017 – Apr 2018',
+              teamSize: '5 members',
+              blurb: 'Internal financial services platform.',
+              bullets: [
+                'Developed contract-management batch processing and new application features, then tested through unit, integration and operational phases.',
+                'Built RESTful APIs and designed, implemented and tested the web interfaces consuming them.',
+                'Gathered requirements directly from clients to clarify complex specifications before build.'
+              ],
+              technologies: ['C#', 'ASP.NET', '.NET Framework', 'MVC', 'Bootstrap', 'jQuery', 'MSSQL']
+            }
+          ]
         }
       ],
+      project: {
+        name: 'spring-boot-todolist',
+        href: 'https://github.com/NweNweWinThan-X/spring-boot-todolist',
+        blurb: 'A task-management application built as a Spring Boot modular monolith serving JSON to a separate Vite single-page app — written to practise the patterns enterprise projects rarely leave room for.',
+        facets: [
+          { label: 'Backend', body: 'Java 21, Spring Boot 4, Spring Security 7, Spring Data JPA, Flyway, PostgreSQL. Stateless JWT (HS384) authentication with role-based access control and per-account data isolation.' },
+          { label: 'Frontend', body: 'React 19, TypeScript, Vite, Tailwind CSS.' },
+          { label: 'CI/CD', body: 'GitHub Actions with four parallel jobs — Maven verify over 32 unit and slice tests, a TypeScript type check and production build, 22 Playwright end-to-end tests against a postgres:17-alpine service container, and a Docker build of both images. A tagged release publishes both images to GitHub Container Registry.' },
+          { label: 'Documentation', body: 'ER diagram, request flow, design rationale, test strategy and CI/CD pipeline documented in-repo, in English and Japanese.' }
+        ],
+        stats: [
+          { label: 'Backend tests', value: '32' },
+          { label: 'E2E tests', value: '22' },
+          { label: 'CI jobs', value: '4' }
+        ]
+      },
       education: {
-        title: 'Bachelor of Computer Science',
-        school: 'Computer University of Magway, Myanmar',
-        detail: 'Graduated Feb 2018'
-      }
+        degree: 'Bachelor of Computer Science (B.C.Sc.)',
+        school: 'University of Computer Studies, Magway',
+        country: 'Myanmar',
+        period: 'Dec 2012 – Feb 2018'
+      },
+      certifications: [
+        { name: 'AWS AI Practitioner', date: 'Jun 2026' },
+        { name: 'TOEIC L&R — 710', date: 'May 2026' },
+        { name: 'TOPJ Japanese — Intermediate C', date: 'Mar 2022' },
+        { name: 'IELTS 6.0', date: 'Aug 2020' }
+      ],
+      languages: [
+        { name: 'Burmese', level: 'Native' },
+        { name: 'English', level: 'Business — TOEIC 710, IELTS 6.0' },
+        { name: 'Japanese', level: 'Business — 4 yrs in Japanese-language teams' },
+        { name: 'Chinese (Mandarin)', level: 'Elementary' }
+      ]
     };
 
     const e = React.createElement;
     const { useState } = React;
-    const Card = ({ children, className = '' }) => e('div', { className: `rounded-3xl border border-white/10 bg-slate-900/80 p-6 ${className}` }, children);
+
+    const Card = ({ children, className = '' }) =>
+      e('div', { className: `rounded-3xl border border-white/10 bg-slate-900/80 p-6 ${className}` }, children);
+
+    const SectionTitle = ({ children, id }) =>
+      e('h2', { id, className: 'text-xs uppercase tracking-[0.35em] text-slate-500 mb-5' }, children);
+
+    /* Certifications as a dated timeline, newest first. Every rail element —
+       dot, line, chevron — lives in one flex column so they stay aligned.
+       The chevron sits below each entry and points up the date order. */
+    const CertTimeline = ({ items }) =>
+      e('ol', null,
+        items.map((c, i) => {
+          const last = i === items.length - 1;
+          return e('li', { key: c.name, className: 'flex gap-3' },
+            e('div', {
+              className: 'flex flex-col items-center w-4 shrink-0', 'aria-hidden': 'true'
+            },
+              e('span', {
+                className: `mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full ${i === 0 ? 'bg-sky-400' : 'bg-slate-600'}`
+              }),
+              !last && e('div', { className: 'w-px flex-1 min-h-[8px] bg-white/10 mt-1.5' }),
+              !last && e('svg', {
+                width: '11', height: '7', viewBox: '0 0 11 7', fill: 'none',
+                className: 'text-sky-400/80 my-[3px]'
+              }, e('path', {
+                d: 'M1 6L5.5 1.5L10 6', stroke: 'currentColor', strokeWidth: '1.7',
+                strokeLinecap: 'round', strokeLinejoin: 'round'
+              })),
+              !last && e('div', {
+                className: 'w-px h-3 bg-gradient-to-b from-sky-400/50 to-sky-400/5'
+              })
+            ),
+            e('div', { className: last ? '' : 'pb-1' },
+              e('p', { className: 'text-sm text-slate-200 leading-5' }, c.name),
+              e('p', { className: 'text-xs text-slate-500 mt-0.5' }, c.date)
+            )
+          );
+        })
+      );
+
+    const Chip = ({ children, active }) =>
+      e('span', {
+        className: `inline-block rounded-full px-3 py-1 text-xs transition ${active
+          ? 'bg-sky-500 text-slate-950 font-medium'
+          : 'bg-slate-950/70 text-slate-400 border border-white/5'}`
+      }, children);
+
+    function ProjectBlock({ project, highlight }) {
+      return e('div', { className: 'border-l border-white/10 pl-5 pb-1' },
+        e('div', { className: 'flex flex-wrap items-baseline gap-x-3 gap-y-1' },
+          e('h4', { className: 'font-semibold text-white' }, project.name),
+          e('span', { className: 'text-xs text-slate-500' }, project.period),
+          e('span', { className: 'text-xs text-slate-600' }, '· ' + project.teamSize)
+        ),
+        project.blurb && e('p', { className: 'mt-1 text-sm text-slate-400' }, project.blurb),
+        e('ul', { className: 'mt-3 space-y-2' },
+          project.bullets.map((b, i) => e('li', { key: i, className: 'flex gap-2 text-sm text-slate-300 leading-6' },
+            e('span', { className: 'mt-[7px] h-1 w-1 shrink-0 rounded-full bg-sky-400' }),
+            e('span', null, b)
+          ))
+        ),
+        e('div', { className: 'mt-3 flex flex-wrap gap-1.5' },
+          project.technologies.map((t) => e(Chip, { key: t, active: highlight.has(t) }, t))
+        )
+      );
+    }
 
     function App() {
-      const [activeSkills, setActiveSkills] = useState(new Set());
-      const skillList = data.skillCategories.flatMap((category) => category.items);
-
-      const toggleSkill = (skill) => setActiveSkills((prev) => {
+      const [active, setActive] = useState(new Set());
+      const toggle = (skill) => setActive((prev) => {
         const next = new Set(prev);
-        if (next.has(skill)) next.delete(skill);
-        else next.add(skill);
+        next.has(skill) ? next.delete(skill) : next.add(skill);
         return next;
       });
 
-      const metrics = [
-        { label: 'Experience', value: '9+ years' },
-        { label: 'Projects', value: '10+ systems' },
-        { label: 'Languages', value: '3+' }
-      ];
+      return e('div', { className: 'min-h-screen bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.15),_transparent_38%),radial-gradient(circle_at_top_right,_rgba(59,130,246,0.18),_transparent_28%),linear-gradient(180deg,_#020617_0%,_#0f172a_45%,_#020617_100%)]' },
+        e('div', { className: 'max-w-5xl mx-auto px-6 py-12' },
 
-      return e('div', { className: 'min-h-screen bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.15),_transparent_38%),radial-gradient(circle_at_top_right,_rgba(59,130,246,0.18),_transparent_28%),linear-gradient(180deg,_#020617_0%,_#0f172a_45%,_#020617_100%)] text-slate-100 antialiased' },
-        e('div', { className: 'max-w-6xl mx-auto px-6 py-10' },
-          e('header', { className: 'mb-10' },
-            e('div', { className: 'flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between' },
-              e('div', null,
-                e('p', { className: 'text-sm uppercase tracking-[0.4em] text-slate-400' }, data.title),
+          /* ---------- header ---------- */
+          e('header', { className: 'mb-14' },
+            e('div', { className: 'flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between' },
+              e('div', { className: 'max-w-2xl' },
+                e('p', { className: 'text-xs uppercase tracking-[0.4em] text-sky-400' }, data.title),
                 e('h1', { className: 'mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-white' }, data.name),
-                e('p', { className: 'mt-5 max-w-3xl text-slate-300 leading-7' }, data.summary)
+                e('p', { className: 'mt-2 text-sm text-slate-400' }, data.tagline),
+                e('p', { className: 'mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300' },
+                  e('span', { className: 'h-1.5 w-1.5 rounded-full bg-emerald-400' }),
+                  data.availability
+                )
               ),
-              e('div', { className: 'space-y-2 text-sm text-slate-300' },
-                e('div', null, e('span', { className: 'font-semibold text-slate-400' }, 'Address:'), ' ', data.address),
-                e('div', null, e('span', { className: 'font-semibold text-slate-400' }, 'Phone:'), ' ', data.phone),
-                e('div', null, e('span', { className: 'font-semibold text-slate-400' }, 'E-mail:'), ' ', e('a', { href: `mailto:${data.email}`, className: 'text-sky-300 hover:text-sky-200' }, data.email)),
-                data.links.map((link) => e('div', { key: link.label, className: 'text-slate-300' },
-                  e('span', { className: 'font-semibold text-slate-400' }, `${link.label}: `),
-                  e('a', { href: link.href, target: '_blank', rel: 'noreferrer', className: 'text-sky-300 hover:text-sky-200' }, link.value)
+              e('div', { className: 'space-y-1.5 text-sm text-slate-400 lg:text-right' },
+                e('div', null, data.location),
+                e('div', null, e('a', { href: `mailto:${data.email}`, className: 'text-sky-300 hover:text-sky-200' }, data.email)),
+                e('div', null, data.phone),
+                data.links.map((l) => e('div', { key: l.label },
+                  e('a', { href: l.href, target: '_blank', rel: 'noreferrer', className: 'text-sky-300 hover:text-sky-200' }, l.value)
                 ))
+              )
+            ),
+            e('div', { className: 'mt-8 flex flex-wrap gap-3' },
+              data.downloads.map((d) => e('a', {
+                key: d.label, href: d.href,
+                className: 'rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-2 text-sm text-sky-200 hover:bg-sky-500/20 transition'
+              }, d.label + ' ↓'))
+            )
+          ),
+
+          e('main', { className: 'space-y-14' },
+
+            /* ---------- summary + metrics ---------- */
+            e('section', { className: 'grid gap-6 lg:grid-cols-[1.6fr_1fr]' },
+              e(Card, { className: 'relative overflow-hidden border-sky-200/20 bg-sky-500/10' },
+                e('div', { className: 'snow-scene' },
+                  e('span'), e('span'), e('span'), e('span'), e('span'), e('span')
+                ),
+                e('div', { className: 'relative z-10' },
+                  e(SectionTitle, null, 'Summary'),
+                  e('p', { className: 'text-slate-300 leading-7' }, data.summary)
+                )
+              ),
+              e('div', { className: 'grid grid-cols-2 gap-4 content-start' },
+                data.metrics.map((m) => e('div', { key: m.label, className: 'rounded-3xl border border-white/10 bg-slate-900/80 p-5' },
+                  e('p', { className: 'text-3xl font-semibold text-white' }, m.value),
+                  e('p', { className: 'mt-1 text-xs uppercase tracking-wider text-slate-500' }, m.label)
+                ))
+              )
+            ),
+
+            /* ---------- skills ---------- */
+            e('section', null,
+              e(Card, null,
+                e(SectionTitle, { id: 'skills' }, 'Core Skills'),
+                e('p', { className: 'mb-5 text-xs text-slate-500' },
+                  active.size
+                    ? `${active.size} selected — highlighted in the experience below`
+                    : 'Tap any technology to highlight where it was used'
+                ),
+                e('div', { className: 'space-y-4' },
+                  data.skillCategories.map((cat) => e('div', { key: cat.title, className: 'sm:flex sm:gap-4' },
+                    e('p', { className: 'shrink-0 sm:w-36 text-xs uppercase tracking-wider text-slate-500 mb-2 sm:mb-0 sm:pt-1.5' }, cat.title),
+                    e('div', { className: 'flex flex-wrap gap-2' },
+                      cat.items.map((item) => e('button', {
+                        key: item, type: 'button', onClick: () => toggle(item),
+                        className: `rounded-full px-3 py-1.5 text-sm transition ${active.has(item)
+                          ? 'bg-sky-500 text-slate-950 font-medium'
+                          : 'bg-slate-950/70 text-slate-300 hover:bg-slate-800 hover:text-white'}`
+                      }, item))
+                    )
+                  )),
+                  e('div', { className: 'sm:flex sm:gap-4 pt-2 border-t border-white/5' },
+                    e('p', { className: 'shrink-0 sm:w-36 text-xs uppercase tracking-wider text-amber-500/70 mb-2 sm:mb-0 sm:pt-1.5' }, 'Learning now'),
+                    e('div', { className: 'flex flex-wrap gap-2' },
+                      data.learning.map((item) => e('span', {
+                        key: item,
+                        className: 'rounded-full border border-amber-400/20 bg-amber-500/5 px-3 py-1.5 text-sm text-amber-200/70'
+                      }, item))
+                    )
+                  )
+                )
+              )
+            ),
+
+            /* ---------- experience ---------- */
+            e('section', null,
+              e(SectionTitle, { id: 'experience' }, 'Experience'),
+              e('div', { className: 'space-y-5' },
+                data.experiences.map((job) => e(Card, { key: job.company },
+                  e('div', { className: 'flex flex-wrap items-baseline justify-between gap-2 pb-5 mb-5 border-b border-white/5' },
+                    e('div', null,
+                      e('div', { className: 'flex items-center gap-2' },
+                        e('h3', { className: 'text-lg font-semibold text-white' }, job.title),
+                        job.current && e('span', { className: 'rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] uppercase tracking-wider text-emerald-300' }, 'Current')
+                      ),
+                      e('p', { className: 'mt-1 text-sm text-slate-400' }, job.company + ' · ' + job.location)
+                    ),
+                    e('div', { className: 'text-right' },
+                      e('p', { className: 'text-sm text-slate-300' }, job.period),
+                      e('p', { className: 'text-xs text-slate-500' }, job.stack)
+                    )
+                  ),
+                  e('div', { className: 'space-y-7' },
+                    job.projects.map((p) => e(ProjectBlock, { key: p.name, project: p, highlight: active }))
+                  )
+                ))
+              )
+            ),
+
+            /* ---------- selected project ---------- */
+            e('section', null,
+              e(SectionTitle, { id: 'project' }, 'Selected Project'),
+              e(Card, { className: 'border-sky-200/20' },
+                e('div', { className: 'flex flex-wrap items-start justify-between gap-4' },
+                  e('div', null,
+                    e('h3', { className: 'text-lg font-semibold text-white font-mono' }, data.project.name),
+                    e('a', {
+                      href: data.project.href, target: '_blank', rel: 'noreferrer',
+                      className: 'text-sm text-sky-300 hover:text-sky-200'
+                    }, 'View on GitHub →')
+                  ),
+                  e('div', { className: 'flex gap-5' },
+                    data.project.stats.map((s) => e('div', { key: s.label, className: 'text-right' },
+                      e('p', { className: 'text-2xl font-semibold text-white' }, s.value),
+                      e('p', { className: 'text-[10px] uppercase tracking-wider text-slate-500' }, s.label)
+                    ))
+                  )
+                ),
+                e('p', { className: 'mt-4 text-slate-300 leading-7' }, data.project.blurb),
+                e('div', { className: 'mt-5 space-y-3' },
+                  data.project.facets.map((f) => e('div', { key: f.label, className: 'sm:flex sm:gap-4' },
+                    e('p', { className: 'shrink-0 sm:w-32 text-xs uppercase tracking-wider text-sky-400/80 mb-1 sm:mb-0 sm:pt-0.5' }, f.label),
+                    e('p', { className: 'text-sm text-slate-300 leading-6' }, f.body)
+                  ))
+                )
+              )
+            ),
+
+            /* ---------- education / certs / languages ---------- */
+            e('section', { className: 'grid gap-5 md:grid-cols-3' },
+              e(Card, null,
+                e(SectionTitle, null, 'Education'),
+                e('p', { className: 'font-semibold text-white leading-6' }, data.education.degree),
+                e('p', { className: 'mt-2 text-sm text-slate-300' }, data.education.school),
+                e('p', { className: 'text-sm text-slate-500' }, data.education.country),
+                e('p', { className: 'mt-2 text-xs text-slate-500' }, data.education.period)
+              ),
+              e(Card, null,
+                e(SectionTitle, null, 'Certifications'),
+                e(CertTimeline, { items: data.certifications })
+              ),
+              e(Card, null,
+                e(SectionTitle, null, 'Languages'),
+                e('div', { className: 'space-y-3' },
+                  data.languages.map((l) => e('div', { key: l.name },
+                    e('p', { className: 'text-sm text-slate-200' }, l.name),
+                    e('p', { className: 'text-xs text-slate-500 leading-5' }, l.level)
+                  ))
+                )
               )
             )
           ),
-          e('main', { className: 'space-y-16' },
-            e('section', { className: 'grid gap-8 lg:grid-cols-[1.5fr_1fr]' },
-              e('div', { className: 'space-y-6' },
-                e(Card, { className: 'border-sky-200/20 bg-sky-500/10 shadow-[0_20px_120px_-40px_rgba(14,165,233,0.35)]' },
-                  e('div', { className: 'snow-scene' },
-                  e('span', null),
-                  e('span', null),
-                  e('span', null),
-                  e('span', null),
-                  e('span', null),
-                  e('span', null)
-                ),
-                e('div', { className: 'flex items-center gap-3 text-sky-300 mb-5 relative z-10' },
-                    e('div', { className: 'h-10 w-10 rounded-2xl bg-sky-500/15 flex items-center justify-center text-xl' }, 'S'),
-                    e('p', { className: 'text-xs uppercase tracking-[0.35em] text-slate-500' }, 'Summary')
-                  ),
-                  e('p', { className: 'text-slate-300 leading-7 relative z-10' }, data.summary)
-                ),
-                e(Card, null,
-                  e('div', { className: 'flex items-center gap-3 text-sky-300 mb-4' },
-                    e('div', { className: 'h-10 w-10 rounded-2xl bg-sky-500/15 flex items-center justify-center text-xl' }, 'W'),
-                    e('p', { className: 'text-xs uppercase tracking-[0.35em] text-slate-500' }, 'Work History')
-                  ),
-                  e('div', { className: 'space-y-4' },
-                    data.experiences.map((item) => e('article', { key: item.company, className: 'rounded-3xl bg-slate-950/80 p-5' },
-                      e('p', { className: 'text-sm text-slate-400' }, item.title),
-                      e('h3', { className: 'mt-2 text-xl font-semibold text-white' }, item.company),
-                      e('p', { className: 'mt-1 text-sm text-slate-500' }, item.period)
-                    ))
-                  )
-                )
-              ),
-              e('div', { className: 'space-y-6' },
-                e(Card, null,
-                  e('div', { className: 'flex items-center gap-3 text-sky-300 mb-4' },
-                    e('div', { className: 'h-10 w-10 rounded-2xl bg-sky-500/15 flex items-center justify-center text-xl' }, 'O'),
-                    e('p', { className: 'text-xs uppercase tracking-[0.35em] text-slate-500' }, 'Overview')
-                  ),
-                  e('div', { className: 'grid gap-4 sm:grid-cols-2' },
-                    metrics.map((metric) => e('div', { key: metric.label, className: 'rounded-3xl bg-slate-900/90 p-5' },
-                      e('p', { className: 'text-sm uppercase tracking-[0.35em] text-slate-500' }, metric.label),
-                      e('p', { className: 'mt-3 text-3xl font-semibold text-white' }, metric.value)
-                    ))
-                  )
-                ),
-                e(Card, null,
-                  e('h2', { className: 'text-xl font-semibold mb-4' }, 'Language Skills'),
-                  e('div', { className: 'space-y-3' },
-                    data.languages.map((lang) => e('div', { key: lang.name, className: 'rounded-3xl bg-slate-950/70 p-4 flex items-center justify-between text-sm text-slate-200' },
-                      e('span', null, lang.name),
-                      e('span', { className: 'text-slate-400' }, lang.level)
-                    ))
-                  )
-                )
-              )
-            ),
-            e('section', { className: 'grid gap-8 lg:grid-cols-[1.25fr_0.75fr]' },
-              e(Card, null,
-                e('h2', { className: 'text-2xl font-bold mb-6' }, 'Highlights'),
-                e('div', { className: 'space-y-6' },
-                  data.experiences.slice(0, 4).map((item) => e('div', { key: item.company, className: 'rounded-3xl bg-slate-950/80 p-6' },
-                    e('h3', { className: 'font-semibold text-white' }, item.company),
-                    e('p', { className: 'mt-2 text-slate-400 leading-7' }, item.overview)
-                  ))
-                )
-              ),
-              e('aside', { className: 'space-y-6' },
-                e(Card, null,
-                  e('h2', { className: 'text-2xl font-bold mb-6' }, 'Education'),
-                  e('div', { className: 'space-y-2 text-slate-300' },
-                    e('p', { className: 'font-semibold text-white' }, data.education.title),
-                    e('p', null, data.education.school),
-                    e('p', { className: 'text-sm text-slate-400' }, data.education.detail)
-                  )
-                ),
-                e(Card, null,
-                  e('h2', { className: 'text-2xl font-bold mb-6' }, 'Skills'),
-                  e('div', { className: 'space-y-4' },
-                    data.skillCategories.map((category) => e('div', { key: category.title },
-                      e('p', { className: 'text-sm uppercase tracking-[0.35em] text-slate-500 mb-3' }, category.title),
-                      e('div', { className: 'grid gap-2 sm:grid-cols-2' },
-                        category.items.map((item) => e('button', { key: item, type: 'button', className: 'rounded-full px-4 py-3 text-sm transition bg-slate-950/80 text-slate-300 hover:bg-slate-800/90 hover:text-white' }, item))
-                      )
-                    ))
-                  )
-                )
-              )
-            ),
-            e('section', { className: 'space-y-6' },
-              e(Card, null,
-                e('h2', { className: 'text-xl font-semibold mb-4' }, 'Interactive Skills'),
-                e('div', { className: 'mb-4 text-sm text-slate-400' }, activeSkills.size ? `${activeSkills.size} selected` : 'Tap a badge to highlight each technology'),
-                e('div', { className: 'flex flex-wrap gap-3' },
-                  skillList.map((skill) => {
-                    const isActive = activeSkills.has(skill);
-                    return e('button', {
-                      key: skill,
-                      type: 'button',
-                      onClick: () => toggleSkill(skill),
-                      className: `rounded-full px-4 py-3 text-sm transition ${isActive ? 'bg-sky-500 text-slate-950 shadow-[0_15px_40px_-20px_rgba(56,189,248,0.8)]' : 'bg-slate-950/80 text-slate-300 hover:bg-slate-800/90 hover:text-white'}`
-                    }, skill);
-                  })
-                )
-              )
-            )
+
+          e('footer', { className: 'mt-16 pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600' },
+            e('p', null, data.name + ' · ' + data.location),
+            e('p', null, 'Updated October 2026')
           )
         )
       );
     }
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(React.createElement(App));
+    ReactDOM.createRoot(document.getElementById('root')).render(e(App));
   </script>
 </body>
 </html>
-
-

@@ -10,3 +10,10 @@ Thumbs.db
 node_modules/
 npm-debug.log*
 .env
+# Personal documents — these contain home address, date of birth, ID photo and
+# scanned certificates. They must never be committed to a public repository.
+cv-form/履歴書*
+cv-form/業務経歴書*
+
+# Local tooling
+.claude/
