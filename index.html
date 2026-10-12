@@ -52,8 +52,21 @@
         { label: 'LinkedIn', value: 'linkedin.com/in/nwe-nwe-win-than', href: 'https://linkedin.com/in/nwe-nwe-win-than' }
       ],
       downloads: [
-        { label: 'Resume (English, PDF)', href: './cv-form/NWENWE_WINTHAN_Resume_English.pdf' },
-        { label: '職務経歴書 (日本語)', href: './cv-form/Shokumu-Keirekisho_NWENWE_WINTHAN_2026.docx' }
+        {
+          label: 'Resume — Version 1', note: 'PDF · 2 pages', primary: true,
+          href: './cv-form/NWENWE_WINTHAN_Resume_version1.pdf',
+          file: 'NweNweWinThan-Resume-v1.pdf'
+        },
+        {
+          label: 'Resume — Version 2', note: 'PDF · 2 pages',
+          href: './cv-form/NWENWE_WINTHAN_Resume_version2.pdf',
+          file: 'NweNweWinThan-Resume-v2.pdf'
+        },
+        {
+          label: '職務経歴書', note: 'DOCX · 日本語',
+          href: './cv-form/Shokumu-Keirekisho_NWENWE_WINTHAN_2026.docx',
+          file: 'NweNweWinThan-Shokumu-Keirekisho-2026.docx'
+        }
       ],
       metrics: [
         { label: 'Experience', value: '8+ yrs' },
@@ -351,9 +364,30 @@
             ),
             e('div', { className: 'mt-8 flex flex-wrap gap-3' },
               data.downloads.map((d) => e('a', {
-                key: d.label, href: d.href,
-                className: 'rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-2 text-sm text-sky-200 hover:bg-sky-500/20 transition'
-              }, d.label + ' ↓'))
+                key: d.label,
+                href: d.href,
+                /* same-origin, so the browser saves the file instead of opening it */
+                download: d.file,
+                className: `group flex items-center gap-3 rounded-2xl border px-4 py-2.5 transition ${d.primary
+                  ? 'border-sky-400/40 bg-sky-500/15 hover:bg-sky-500/25'
+                  : 'border-white/10 bg-slate-900/70 hover:bg-slate-800/80'}`
+              },
+                e('svg', {
+                  width: '16', height: '16', viewBox: '0 0 24 24', fill: 'none',
+                  stroke: 'currentColor', strokeWidth: '2', strokeLinecap: 'round',
+                  strokeLinejoin: 'round',
+                  className: `shrink-0 ${d.primary ? 'text-sky-300' : 'text-slate-400'} group-hover:text-sky-200`,
+                  'aria-hidden': 'true'
+                },
+                  e('path', { d: 'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4' }),
+                  e('polyline', { points: '7 10 12 15 17 10' }),
+                  e('line', { x1: '12', y1: '15', x2: '12', y2: '3' })
+                ),
+                e('span', { className: 'text-left leading-tight' },
+                  e('span', { className: `block text-sm ${d.primary ? 'text-sky-100' : 'text-slate-200'}` }, d.label),
+                  e('span', { className: 'block text-[11px] text-slate-500' }, d.note)
+                )
+              ))
             )
           ),
 
