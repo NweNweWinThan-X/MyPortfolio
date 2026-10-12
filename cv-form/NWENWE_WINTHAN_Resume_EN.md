@@ -17,7 +17,7 @@ nearly 4 years in Tokyo. Three of those systems were in the financial domain —
 a banking platform covering payments, fund management and loan products, and a financial business
 system. Current stack is Java 21 / Spring Boot with React; previously C# / .NET MVC and PHP /
 Laravel. Owns features end to end across both tiers: requirements definition, detailed design,
-implementation, and unit through operational testing. Served as sub-leader on three projects, running daily progress
+implementation, and unit through operational testing. Led three projects as team leader, running daily progress
 tracking, task allocation and code-review standards for teams of five to seven. Business-level
 English and Japanese.
 
@@ -30,7 +30,7 @@ English and Japanese.
 **Backend** Spring Boot, Spring Security, Spring Data JPA, Thymeleaf, Laravel, ASP.NET MVC,
 .NET Framework, REST API design, batch processing, JWT authentication, role-based access control
 
-**Frontend** React 19, Vue.js, Vuex, Nuxt.js, Tailwind CSS, Bootstrap, Vuetify, jQuery, Vite
+**Frontend** React, Vue.js, Vuex, Nuxt.js, Tailwind CSS, Bootstrap, Vuetify, jQuery, Vite
 
 **Databases** PostgreSQL, MySQL, Oracle, SQL Server, Flyway migrations, schema design, query tuning
 
@@ -55,7 +55,7 @@ technical documentation, release support, stakeholder and QA coordination, techn
 
 **Production migration safety** — Took a live brokerage CRM through an Oracle version upgrade using full-screen new-versus-current comparison and regression testing.
 
-**Team leadership** — Sub-leader on three projects: schedule management, task allocation, resource planning and code review for teams of five to seven.
+**Team leadership** — Team leader on three projects: schedule management, task allocation, resource planning and code review for teams of five to seven.
 
 **Bilingual delivery** — Four years in Japanese-language engineering teams in Tokyo, including specification coordination with a Japanese government ministry.
 
@@ -119,15 +119,15 @@ technical documentation, release support, stakeholder and QA coordination, techn
 
 ---
 
-### Software Engineer → Sub Leader — Seattle Consulting Co., Ltd. / META TEAM Co., Ltd. · Yangon, Myanmar
-**Jun 2018 – Oct 2022** · PHP / Laravel / Vue.js · teams of 5–7 · Sub Leader from Feb 2020
+### Developer → Senior Developer → Team Leader — Seattle Consulting Co., Ltd. / META TEAM Co., Ltd. · Yangon, Myanmar
+**Jun 2018 – Oct 2022** · PHP / Laravel / Vue.js · teams of 5–7 · Team Leader from Feb 2020
 
 **ToolSite — Web Catalog & Product Management System** (Jul 2018 – Feb 2022)
 
 - Owned product-management and batch features across the full lifecycle — requirements
   definition, basic and detailed design, build, and unit through operational testing — on a
   three-and-a-half-year engagement.
-- Promoted to Sub Leader after 18 months; took on schedule management, task allocation and code
+- Promoted after 18 months and ultimately to Team Leader; took on schedule management, task allocation and code
   review for a six-person team, and proposed the technology choices for new modules.
 - Proposed a re-sequenced task plan to the project lead when the team fell significantly behind
   schedule, and took on redistribution of work to recover the delivery date.
@@ -135,16 +135,16 @@ technical documentation, release support, stakeholder and QA coordination, techn
 
 *PHP, Laravel, Vue.js, Vuex, Sass, Bootstrap, CoreUI, Vuetify, MySQL, Docker, AWS (S3/SNS/CloudWatch), GitHub*
 
-**Axis — Energy Management System** (Feb 2022 – May 2022) · Sub Leader
+**Axis — Energy Management System** (Feb 2022 – May 2022) · Team Leader
 
 - Built electricity capacity search, consumption calculation and aggregation features, plus
   chart-based dashboards, for a reporting system spanning municipal and prefectural bodies.
-- Ran the full lifecycle from requirements definition to operational testing as sub-leader of a
+- Ran the full lifecycle from requirements definition to operational testing as team leader of a
   seven-person team, including the next-version upgrade plan.
 
 *PHP, Laravel, Vue.js, Vuex, Chart.js, Bootstrap, MySQL, BitBucket*
 
-**Spider — Construction Management System** (May 2022 – Oct 2022) · Sub Leader from Jun 2022
+**Spider — Construction Management System** (May 2022 – Oct 2022) · Team Leader from Jun 2022
 
 - Coordinated specifications directly with Japan's Ministry of Health, Labour and Welfare, then
   designed, built and tested the agreed features for site, worker, drawing and process management.
@@ -156,7 +156,7 @@ technical documentation, release support, stakeholder and QA coordination, techn
 
 ---
 
-### Software Engineer — OK Dollar Co., Ltd. · Yangon, Myanmar
+### Intern Developer — OK Dollar Co., Ltd. · Yangon, Myanmar
 **Oct 2017 – Apr 2018** · C# / ASP.NET MVC · team of 5
 
 **OK$ Financial Business System**
