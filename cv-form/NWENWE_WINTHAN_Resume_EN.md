@@ -1,6 +1,6 @@
 # NWE NWE WIN THAN
 
-**Senior Software Engineer — Full-Stack · Java / Spring Boot · React**
+**Senior Software Engineer — Full-Stack Developer**
 
 - Tokyo, Japan
 - Valid Japanese work visa
