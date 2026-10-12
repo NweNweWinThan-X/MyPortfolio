@@ -83,7 +83,7 @@
         { title: 'Quality', items: ['JUnit', 'Playwright', 'Unit / IT / system / operational test design', 'Regression testing', 'Code review'] },
         { title: 'Delivery', items: ['Agile', 'SOLID', 'Requirements definition', 'Basic & detailed design', 'Technical documentation', 'Mentoring'] }
       ],
-      learning: ['Kubernetes', 'Redis', 'Apache Kafka', 'Terraform'],
+      learning: ['Kubernetes', 'Redis', 'AWS', 'Terraform'],
       experiences: [
         {
           title: 'Senior Software Engineer',
@@ -297,6 +297,32 @@
         })
       );
 
+    /* Line icons for the contact list. 24x24 stroke paths, inheriting
+       currentColor so each row can tint its own icon. */
+    const ICONS = {
+      pin: { paths: ['M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'],
+             circles: [{ cx: 12, cy: 10, r: 3 }] },
+      mail: { paths: ['M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z',
+                      'M22 6l-10 7L2 6'] },
+      phone: { paths: ['M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z'] },
+      github: { paths: ['M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.8-1.6 6.8-7.3A5.7 5.7 0 0 0 20.3 4a5.3 5.3 0 0 0-.1-4S18.9-.4 16 1.5a13.4 13.4 0 0 0-7 0C6.1-.4 4.8 0 4.8 0a5.3 5.3 0 0 0-.1 4A5.7 5.7 0 0 0 3.2 8.2c0 5.7 3.5 6.9 6.8 7.3a3.4 3.4 0 0 0-1 2.6V22'] },
+      linkedin: { paths: ['M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z',
+                          'M6 9H2v12h4z'],
+                  circles: [{ cx: 4, cy: 4, r: 2 }] }
+    };
+
+    const Icon = ({ name, className = '' }) => {
+      const ic = ICONS[name] || ICONS.pin;
+      return e('svg', {
+        width: '15', height: '15', viewBox: '0 0 24 24', fill: 'none',
+        stroke: 'currentColor', strokeWidth: '1.9', strokeLinecap: 'round',
+        strokeLinejoin: 'round', className: `shrink-0 ${className}`, 'aria-hidden': 'true'
+      },
+        ...ic.paths.map((d, i) => e('path', { key: 'p' + i, d })),
+        ...(ic.circles || []).map((c, i) => e('circle', { key: 'c' + i, ...c }))
+      );
+    };
+
     const Chip = ({ children, active }) =>
       e('span', {
         className: `inline-block rounded-full px-3 py-1 text-xs transition ${active
@@ -347,17 +373,18 @@
                   data.availability
                 )
               ),
-              e('ul', { className: 'space-y-1.5 text-sm text-slate-400 shrink-0 lg:ml-auto' },
+              e('ul', { className: 'space-y-2 text-sm text-slate-400 shrink-0 lg:ml-auto' },
                 [
-                  { key: 'loc', node: data.location },
-                  { key: 'mail', node: e('a', { href: `mailto:${data.email}`, className: 'text-sky-300 hover:text-sky-200' }, data.email) },
-                  { key: 'tel', node: e('a', { href: `tel:${data.phone.replace(/[^+\d]/g, '')}`, className: 'hover:text-slate-200' }, data.phone) },
+                  { key: 'loc', icon: 'pin', node: data.location },
+                  { key: 'mail', icon: 'mail', node: e('a', { href: `mailto:${data.email}`, className: 'text-sky-300 hover:text-sky-200' }, data.email) },
+                  { key: 'tel', icon: 'phone', node: e('a', { href: `tel:${data.phone.replace(/[^+\d]/g, '')}`, className: 'hover:text-slate-200' }, data.phone) },
                   ...data.links.map((l) => ({
                     key: l.label,
+                    icon: l.label.toLowerCase(),
                     node: e('a', { href: l.href, target: '_blank', rel: 'noreferrer', className: 'text-sky-300 hover:text-sky-200' }, l.value)
                   }))
                 ].map((row) => e('li', { key: row.key, className: 'flex items-center gap-2.5' },
-                  e('span', { className: 'h-1 w-1 shrink-0 rounded-full bg-sky-400/70', 'aria-hidden': 'true' }),
+                  e(Icon, { name: row.icon, className: 'text-sky-400/80' }),
                   row.node
                 ))
               )
