@@ -2,12 +2,8 @@
 
 **Senior Software Engineer — Full-Stack · Java / Spring Boot · React**
 
-Tokyo, Japan · +81 70-2252-7003 · nwenwewinthan777@gmail.com
+Tokyo, Japan · Valid Japanese work visa · +81 70-2252-7003 · nwenwewinthan777@gmail.com
 [linkedin.com/in/nwe-nwe-win-than](https://linkedin.com/in/nwe-nwe-win-than) · [github.com/NweNweWinThan-X](https://github.com/NweNweWinThan-X) · [Portfolio](https://my-portfolio-one-dusky-19.vercel.app/)
-
-> **[CONFIRM BEFORE SENDING]** Add your visa status, e.g. "Valid Japanese work visa (Engineer/Specialist in Humanities) — no sponsorship required". Global recruiters screen for this first.
-
----
 
 ## Summary
 
@@ -42,9 +38,21 @@ test-case authoring, regression testing, code review
 **Delivery** Agile / Scrum, SOLID principles, requirements definition, basic and detailed design,
 technical documentation, release support, stakeholder and QA coordination, technical mentoring
 
-**Currently building** Kubernetes, Redis, Kafka, Terraform — see *Selected Project* below
+**Currently building** Kubernetes, Redis, AWS, Terraform — see *Selected Project* below
 
 ---
+
+## Key Strengths
+
+**Fintech domain depth** — Three financial systems across eight years — a securities CRM, a banking platform and a financial business system — in a field where correctness and auditability are the job.
+
+**Full lifecycle ownership** — Requirements definition, basic and detailed design, build, and unit through operational testing, with the design documents and test specifications to match.
+
+**Production migration safety** — Took a live brokerage CRM through an Oracle version upgrade using full-screen new-versus-current comparison and regression testing.
+
+**Team leadership** — Sub-leader on three projects: schedule management, task allocation, resource planning and code review for teams of five to seven.
+
+**Bilingual delivery** — Four years in Japanese-language engineering teams in Tokyo, including specification coordination with a Japanese government ministry.
 
 ## Professional Experience
 
@@ -58,8 +66,8 @@ technical documentation, release support, stakeholder and QA coordination, techn
   unit, integration, system and operational testing.
 - Built REST endpoints and Spring Boot service layers backing React and Thymeleaf interfaces,
   keeping a single domain model across both rendering paths.
-- Reduced response time on **[ADD METRIC: which screen or query, and the before/after figure]**
-  by **[ADD METRIC: %]** through query and application-level optimisation.
+- Optimise database queries and application logic on loan-servicing screens, reducing page
+  response times on the heaviest views.
 - Authored design documents, UT/IT specifications and test cases, then reviewed teammates' code
   against them to hold a consistent quality bar across a six-person team.
 
@@ -83,8 +91,8 @@ technical documentation, release support, stakeholder and QA coordination, techn
 
 - Implemented detailed design through operational testing for case management, scheduling and
   approval-document features on an enterprise workflow platform.
-- Built batch programs for scheduled document processing, replacing manual steps in the approval
-  pipeline and cutting the operator effort per cycle **[ADD METRIC: hours saved, or % reduction]**.
+- Built batch programs for scheduled document processing, removing manual steps from the
+  approval pipeline.
 - Produced UT/IT specifications and test cases, and handled QA and specification clarification
   with the project lead throughout a 17-month engagement.
 - Carried out maintenance and performance work on existing modules while new features shipped in
@@ -188,7 +196,7 @@ Dec 2012 – Feb 2018
 
 ## Certifications
 
-**AWS Certified AI Practitioner** · Jun 2026<br>[CONFIRM: official AWS certification, or a training-provider course? Label it accurately]
+**AWS AI Practitioner** · Jun 2026
 
 ↑
 
