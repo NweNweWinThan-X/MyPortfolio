@@ -17,3 +17,6 @@ cv-form/業務経歴書*
 
 # Local tooling
 .claude/
+
+# Superseded Bold.Pro resumes — these print the home street address.
+cv-form/*_OLD*.pdf
