@@ -2,8 +2,13 @@
 
 **Senior Software Engineer — Full-Stack · Java / Spring Boot · React**
 
-Tokyo, Japan · Valid Japanese work visa · +81 70-2252-7003 · nwenwewinthan777@gmail.com
-[linkedin.com/in/nwe-nwe-win-than](https://linkedin.com/in/nwe-nwe-win-than) · [github.com/NweNweWinThan-X](https://github.com/NweNweWinThan-X) · [Portfolio](https://my-portfolio-one-dusky-19.vercel.app/)
+- Tokyo, Japan
+- Valid Japanese work visa
+- +81 70-2252-7003
+- nwenwewinthan777@gmail.com
+- [linkedin.com/in/nwe-nwe-win-than](https://linkedin.com/in/nwe-nwe-win-than)
+- [github.com/NweNweWinThan-X](https://github.com/NweNweWinThan-X)
+- [Portfolio](https://my-portfolio-one-dusky-19.vercel.app/)
 
 ## Summary
 
