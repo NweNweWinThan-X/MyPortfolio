@@ -15,6 +15,10 @@ import cv_data as D  # noqa: E402
 # Sidebar sections pushed to page 2. Empty list == single continuous sidebar.
 SIDEBAR_PAGE2 = ('Learning', 'Certifications')
 
+# Index into EXPERIENCE of the entry that opens page 2, so the main column
+# starts level with the sidebar. None == let it break wherever it lands.
+MAIN_PAGE2_FROM = 2
+
 
 def icon(path, color="#ffffff", size=11):
     return (f'<svg class="ic" width="{size}" height="{size}" viewBox="0 0 24 24" '
@@ -41,8 +45,7 @@ def ul(items):
 
 
 CSS = """
-@page { size: A4; margin: 9mm 0 0 0; }
-@page :first { margin: 0; }
+@page { size: A4; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -101,8 +104,11 @@ li::before { content: "•"; position: absolute; left: 0; color: #14365c; font-w
         padding: .5mm 1.6mm; border-radius: 1mm; margin: 0 1mm 1mm 0; }
 /* Forces the following sidebar block onto the next sheet. */
 .pagebreak { break-before: page; page-break-before: always; height: 0; }
-/* first heading on page 2 starts flush, like h2:first-child on page 1 */
-.pagebreak + h2 { margin-top: 0; }
+/* Page 2 top spacing lives inside the columns, not in the @page margin, so
+   the sidebar's grey background reaches the paper edge. Both columns use the
+   same 9mm so their first lines stay level. */
+.pagebreak + h2 { margin-top: 9mm; }
+.row.page2 { break-before: page; page-break-before: always; margin-top: 9mm; }
 """
 
 
@@ -136,8 +142,9 @@ def sidebar_sections():
 
 def build(out):
     exp = ''
-    for j in D.EXPERIENCE:
-        exp += f'''<div class="row"><div class="when">{j["from"]} -<br>{j["to"]}</div>
+    for n, j in enumerate(D.EXPERIENCE):
+        cls = 'row page2' if n == MAIN_PAGE2_FROM else 'row'
+        exp += f'''<div class="{cls}"><div class="when">{j["from"]} -<br>{j["to"]}</div>
 <div class="what"><h3>{j["role"]}</h3>
 <div class="org">{j["company"]} — {j["location"]}</div>
 <div class="proj">{j["projects"]}</div>
