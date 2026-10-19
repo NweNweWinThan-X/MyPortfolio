@@ -41,11 +41,12 @@ def ul(items):
 
 
 CSS = """
-@page { size: A4; margin: 0; }
+@page { size: A4; margin: 9mm 0 0 0; }
+@page :first { margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-       font-size: 8.4pt; line-height: 1.34; color: #22262b; }
+       font-size: 7.95pt; line-height: 1.24; color: #22262b; }
 .band { background: #14365c; color: #fff; padding: 10mm 11mm 7mm;
         display: flex; align-items: center; gap: 9mm; }
 .band .txt { flex: 1; }
@@ -58,22 +59,24 @@ body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 .side { width: 32%; background: #eef1f4; padding: 7mm 8mm 8mm 6mm; }
 /* The sidebar is one grey column per page. Sections after the split sit in
    .side-2, which the page-2 band positions below the page boundary. */
-h2 { font-size: 11pt; color: #14365c; font-weight: 700; margin: 5mm 0 2mm;
+h2 { font-size: 10.2pt; color: #14365c; font-weight: 700; margin: 3.8mm 0 1.6mm;
      padding-bottom: 1mm; border-bottom: .9pt solid #c3ccd6; }
 h2:first-child { margin-top: 0; }
 .side h2 { font-size: 10.5pt; }
-.row { display: flex; gap: 4mm; margin-bottom: 3.4mm; page-break-inside: avoid; }
+.row { display: flex; gap: 4mm; margin-bottom: 2.6mm; page-break-inside: avoid; }
 .when { width: 15mm; flex: 0 0 15mm; font-weight: 700; color: #3c4854; font-size: 8pt;
         padding-top: .4mm; }
 .what { flex: 1; }
-.what h3 { font-size: 10pt; font-weight: 700; color: #1d2630; }
+.what h3 { font-size: 9.4pt; font-weight: 700; color: #1d2630; }
 .org { font-style: italic; color: #4e5a66; font-size: 8.6pt; margin-bottom: .6mm; }
 .proj { font-size: 7.9pt; color: #14365c; font-weight: 600; margin-bottom: 1mm; }
 ul { list-style: none; }
-li { position: relative; padding-left: 3.4mm; margin-bottom: 1.1mm; text-align: justify; }
+li { position: relative; padding-left: 3.4mm; margin-bottom: .7mm; text-align: justify; }
 li::before { content: "•"; position: absolute; left: 0; color: #14365c; font-weight: 700; }
 .tech { font-size: 7.6pt; color: #6a7580; font-style: italic; margin-top: 1mm; }
 .sum { text-align: justify; margin-bottom: 1mm; }
+.ks { margin-bottom: 1.1mm; page-break-inside: avoid; }
+.ks b { color: #14365c; }
 .pi { margin-bottom: 2.6mm; }
 .pi .lbl { font-weight: 700; color: #1d2630; font-size: 8.4pt; display: flex;
            align-items: center; gap: 1.6mm; }
@@ -150,6 +153,9 @@ def build(out):
     proj = (f'<div class="pr"><b>{pr["name"]}</b> · {pr["url"]}<br>{pr["blurb"]}'
             + ul(pr["points"]) + '</div>')
 
+    strengths = ''.join(f'<div class="ks"><b>{t}</b> — {d}</div>'
+                        for t, d in D.STRENGTHS)
+
     page1, page2 = [], []
     for title, html in sidebar_sections():
         (page2 if title in SIDEBAR_PAGE2 else page1).append(f'<h2>{title}</h2>{html}')
@@ -165,6 +171,7 @@ def build(out):
 <div class="wrap">
  <div class="main">
   <p class="sum">{D.SUMMARY}</p>
+  <h2>Key Strengths</h2>{strengths}
   <h2>Experience</h2>{exp}
   <h2>Selected Project</h2>{proj}
   <h2>Education</h2>{edu}
