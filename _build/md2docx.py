@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import cv_data as CVD  # noqa: E402
 from docx import Document  # noqa: E402
 from docx.enum.table import WD_TABLE_ALIGNMENT  # noqa: E402
+from docx.opc.constants import RELATIONSHIP_TYPE as RT  # noqa: E402
 from docx.enum.text import WD_ALIGN_PARAGRAPH  # noqa: E402
 from docx.oxml import OxmlElement  # noqa: E402
 from docx.oxml.ns import qn  # noqa: E402
@@ -51,10 +52,46 @@ def style_run(run, latin, east_asian):
     rf.set(qn('w:eastAsia'), east_asian)
 
 
+def add_hyperlink(par, url, text, cfg, size=None):
+    """Append a clickable w:hyperlink run; python-docx has no API for this."""
+    r_id = par.part.relate_to(url, RT.HYPERLINK, is_external=True)
+    link = OxmlElement('w:hyperlink')
+    link.set(qn('r:id'), r_id)
+    run = OxmlElement('w:r')
+    rpr = OxmlElement('w:rPr')
+    rf = OxmlElement('w:rFonts')
+    rf.set(qn('w:ascii'), cfg['latin'])
+    rf.set(qn('w:hAnsi'), cfg['latin'])
+    rf.set(qn('w:eastAsia'), cfg['ea'])
+    rpr.append(rf)
+    col = OxmlElement('w:color')
+    col.set(qn('w:val'), '1D5F99')
+    rpr.append(col)
+    u = OxmlElement('w:u')
+    u.set(qn('w:val'), 'single')
+    rpr.append(u)
+    if size is not None:
+        sz = OxmlElement('w:sz')
+        sz.set(qn('w:val'), str(int(size.pt * 2)))
+        rpr.append(sz)
+    run.append(rpr)
+    t = OxmlElement('w:t')
+    t.text = text
+    t.set(qn('xml:space'), 'preserve')
+    run.append(t)
+    link.append(run)
+    par._p.append(link)          # runs are appended in order, so this stays in place
+    return link
+
+
 def add_inline(par, text, cfg, bold=False, size=None, color=None):
     text = text.replace('<br>', '\n')
     for part in INLINE.split(text):
         if not part:
+            continue
+        m = re.fullmatch(r'\[([^\]]+)\]\(([^)]+)\)', part)
+        if m:
+            add_hyperlink(par, m.group(2), m.group(1), cfg, size=size)
             continue
         b, i, mono = bold, False, False
         if part.startswith('**') and part.endswith('**') and len(part) > 4:
@@ -63,10 +100,6 @@ def add_inline(par, text, cfg, bold=False, size=None, color=None):
             part, i = part[1:-1], True
         elif part.startswith('`') and part.endswith('`') and len(part) > 2:
             part, mono = part[1:-1], True
-        else:
-            m = re.fullmatch(r'\[([^\]]+)\]\(([^)]+)\)', part)
-            if m:
-                part = m.group(1)
         for n, chunk in enumerate(part.split('\n')):
             if n:
                 par.add_run().add_break()
