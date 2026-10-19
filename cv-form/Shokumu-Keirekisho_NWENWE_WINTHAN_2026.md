@@ -232,7 +232,7 @@ University of Computer Studies, Magway（B.C.Sc）を卒業後、8年以上に�
 
 ↑
 
-**IELTS 6.0／英検準1級**　2020年08月
+**IELTS 6.5／英検準1級**　2020年08月
 
 ↑
 
@@ -243,7 +243,7 @@ University of Computer Studies, Magway（B.C.Sc）を卒業後、8年以上に�
 | 言語 | レベル |
 |--|--|
 | ビルマ語 | 母語 |
-| 英語 | ビジネスレベル（TOEIC 710点、IELTS 6.0） |
+| 英語 | ビジネスレベル（TOEIC 710点、IELTS 6.5） |
 | 日本語 | ビジネスレベル（東京にて4年間、日本語環境の開発チームで勤務。TOPJ中級C） |
 | 中国語（北京語） | 初級 |
 
