@@ -213,7 +213,7 @@ Dec 2012 – Feb 2018
 
 ↑
 
-**IELTS 6.0** · Aug 2020
+**IELTS 6.5** · Aug 2020
 
 ---
 
@@ -222,6 +222,6 @@ Dec 2012 – Feb 2018
 | | |
 |--|--|
 | Burmese | Native |
-| English | Business level — TOEIC 710, IELTS 6.0 |
+| English | Business level — TOEIC 710, IELTS 6.5 |
 | Japanese | Business level — four years working in Japanese-language engineering teams in Tokyo; TOPJ Intermediate C. Studying for JLPT N2. |
 | Chinese (Mandarin) | Elementary |
