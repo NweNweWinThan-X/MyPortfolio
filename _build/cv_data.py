@@ -19,7 +19,7 @@ CONTACT = {
     "email": "nwenwewinthan777@gmail.com",
     "linkedin": "linkedin.com/in/nwe-nwe-win-than",
     "github": "github.com/NweNweWinThan-X",
-    "portfolio": "my-portfolio-one-dusky-19.vercel.app",
+    "portfolio": "nwenwewinthan-portfolio.vercel.app",
     "visa": "Valid Japanese work visa",
 }
 

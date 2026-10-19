@@ -35,4 +35,4 @@ Check -> https://vercel.com/nwenwewinthan-xs-projects/my-portfolio
 
 #### Click here -> https://nwenwewinthan-x.github.io/MyPortfolio/
 
-#### With vercel deploy is here ->  https://my-portfolio-one-dusky-19.vercel.app/
+#### With vercel deploy is here ->  https://nwenwewinthan-portfolio.vercel.app/

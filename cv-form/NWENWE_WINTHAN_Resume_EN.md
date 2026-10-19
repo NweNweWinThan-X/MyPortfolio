@@ -8,7 +8,7 @@
 - nwenwewinthan777@gmail.com
 - [linkedin.com/in/nwe-nwe-win-than](https://linkedin.com/in/nwe-nwe-win-than)
 - [github.com/NweNweWinThan-X](https://github.com/NweNweWinThan-X)
-- [Portfolio](https://my-portfolio-one-dusky-19.vercel.app/)
+- [Portfolio](https://nwenwewinthan-portfolio.vercel.app/)
 
 ## Summary
 
