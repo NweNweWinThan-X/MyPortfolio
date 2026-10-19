@@ -86,9 +86,11 @@ li::before { content: "•"; position: absolute; left: 0; color: #14365c; font-w
 .lg { margin-bottom: 2.2mm; }
 .lg .nm { font-weight: 700; font-size: 8.3pt; color: #1d2630; }
 .lg .lv { font-size: 7.7pt; color: #5a6672; }
-.ct { margin-bottom: 2.2mm; }
+.ct { margin-bottom: 0; }
 .ct .nm { font-size: 8.2pt; color: #1d2630; }
 .ct .dt { font-size: 7.6pt; color: #6a7580; }
+/* newest first; the arrow points up the date order */
+.up { color: #14365c; font-size: 8.5pt; line-height: 1; margin: .8mm 0 .8mm .6mm; }
 .ic { vertical-align: middle; }
 .pr { font-size: 7.9pt; }
 .pr b { color: #14365c; }
@@ -116,8 +118,9 @@ def sidebar_sections():
                  f'<div class="rate">{dots(r)}</div></div>' for n, r in D.SKILL_RATINGS)
     lg = ''.join(f'<div class="lg"><div class="nm">{n}</div><div class="lv">{l}</div></div>'
                  for n, l, _ in D.LANGUAGES)
-    ct = ''.join(f'<div class="ct"><div class="nm">{n}</div><div class="dt">{d}</div></div>'
-                 for n, d in D.CERTIFICATIONS)
+    ct = '<div class="up">&#8593;</div>'.join(
+        f'<div class="ct"><div class="nm">{n}</div><div class="dt">{d}</div></div>'
+        for n, d in D.CERTIFICATIONS)
     chips = ''.join(f'<span class="chip">{t}</span>' for t in D.LEARNING)
     return [
         ("Personal Info", pi),

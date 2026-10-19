@@ -65,6 +65,9 @@ li::before { content: "•"; position: absolute; left: .5mm; color: #1f2328; }
 .stat { display: flex; gap: 4mm; margin: 1.2mm 0; }
 .stat b { font-size: 11pt; color: #1a86f0; }
 .stat i { font-style: normal; font-size: 7.3pt; color: #6a7580; display: block; }
+/* newest first; the arrow points up the date order */
+.up { color: #1a86f0; font-size: 8.5pt; line-height: 1; margin: .6mm 0 .6mm .4mm; }
+.blk.cert { margin-bottom: 0; }
 """
 
 
@@ -98,8 +101,9 @@ def build(out):
                   for t, d in D.STRENGTHS)
     tags = ''.join(f'<span class="tag">{t}</span>' for t in D.SKILL_TAGS)
     learn = ''.join(f'<span class="tag">{t}</span>' for t in D.LEARNING)
-    cert = ''.join(f'<div class="blk"><div class="t">{n}</div><div class="s">{d}</div></div>'
-                   for n, d in D.CERTIFICATIONS)
+    cert = '<div class="up">&#8593;</div>'.join(
+        f'<div class="blk cert"><div class="t">{n}</div><div class="s">{d}</div></div>'
+        for n, d in D.CERTIFICATIONS)
 
     langs = ''
     for n, l, r in D.LANGUAGES:
